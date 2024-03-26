@@ -66,7 +66,7 @@ async def handler(websocket):
 
     async for message in websocket:
         # Parse a "play" event from the UI.
-        # Recibimos un str (un JSON string) y lo convertimos en un diccionario python
+        # We receive a str (a JSON string) and convert it into a python dictionary
         event = json.loads(message)
         assert event["type"] == "play"
         column = event["column"]
